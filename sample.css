@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.month-num {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.month-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.today-btn {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.header-icons span {
+  margin-left: 12px;
+  font-size: 18px;
+}
+
+/* ===== Weekdays ===== */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0 16px;
+  color: #888;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ===== Calendar ===== */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  padding: 16px;
+}
+
+.day {
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 10px;
+}
+
+.day.today {
+  background: #222;
+  color: #fff;
+}
+
+.day.selected {
+  background: #eee;
+}
+
+.sun { color: #3b82f6; }
+
+/* ===== Detail ===== */
+.detail {
+  padding: 16px;
+}
+
+.holiday {
+  color: #3b82f6;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.detail h2 {
+  font-size: 20px;
+  margin: 0 0 16px;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  background: #f3f4f6;
+}
