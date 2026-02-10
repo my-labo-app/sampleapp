@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
-  font-family: 'Zen Kurenaido', sans-serif;
+  font-family: vdl-penletter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
 
 body {
