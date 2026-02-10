@@ -1,14 +1,14 @@
 * {
   box-sizing: border-box;
-  font-family: vdl-penletter, sans-serif;
-  font-style: normal;
-  font-weight: 500;
 }
 
 body {
   margin: 0;
   background: #fff;
   color: #111;
+  font-family: vdl-penletter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
 
 /* ===== Header ===== */
