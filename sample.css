@@ -223,10 +223,18 @@ body {
   transform: translateY(0);
 }
 
-#view-mode #event-list {
-  padding-left: 8px;
+.sheet-handle {
+  width: 40px;
+  height: 4px;
+  background: #ccc;
+  border-radius: 2px;
+  margin: 8px auto;
 }
 
-#view-mode #no-event: {
-  align-items: center;
+#selectedDate {
+  margin-left: 16px;
+}
+
+#no-event {
+  text-align: center;
 }
