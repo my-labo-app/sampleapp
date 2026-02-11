@@ -231,10 +231,6 @@ body {
   margin: 8px auto;
 }
 
-.sheet-content {
-  padding: 16px;
-}
-
 #selectedDate {
   margin: 5px 0 16px 5px;
 }
@@ -243,4 +239,50 @@ body {
   text-align: center;
   margin-top: 40px;
   color: #888;
+}
+
+.sheet-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sheet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-input {
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+  outline: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.color-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+
+.clickable {
+  cursor: pointer;
 }
