@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener ("DOMContentLoaded", () => {
 
   /* ===== 基本参照 ===== */
   const today = new Date();
@@ -303,8 +303,6 @@ bottomSheet.addEventListener("touchend", () => {
   bottomSheet.style.transform = "";
   startY = 0;
   currentY = 0;
-});
-
 });
 
 });
