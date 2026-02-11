@@ -207,7 +207,7 @@ body {
   right: 0;
   bottom: 0;
 
-  height: 85%;
+  height: 83%;
   background: #fff;
   border-radius: 16px 16px 0 0;
   box-shadow: 0 -4px 20px rgba(0,0,0,.15);
@@ -236,7 +236,7 @@ body {
 }
 
 #selectedDate {
-  margin: 8px 0 16px 16px;
+  margin: 5px 0 16px 10px;
 }
 
 #no-event {
