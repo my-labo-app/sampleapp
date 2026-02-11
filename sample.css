@@ -224,9 +224,9 @@ body {
 }
 
 #view-mode #event-list {
-  left: 5px;
+  padding-left: 8px;
 }
 
 #view-mode #no-event: {
-  text-align: center;
+  align-items: center;
 }
