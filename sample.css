@@ -222,3 +222,11 @@ body {
 .bottom-sheet.active {
   transform: translateY(0);
 }
+
+#event-list {
+  left: 5px;
+}
+
+#no-event: {
+  text-align: center;
+}
