@@ -92,6 +92,33 @@ centerSearch.addEventListener("input", () => {
   console.log("検索:", keyword);
 });
 
+const doSearch = document.getElementById("do-search");
+const searchResults = document.getElementById("search-results");
+
+doSearch.addEventListener("click", () => {
+  const keyword = centerSearch.value.trim();
+  if (!keyword) return;
+
+  searchResults.innerHTML = "";
+
+  let found = false;
+
+  for (const dateKey in events) {
+    events[dateKey].forEach(title => {
+      if (title.includes(keyword)) {
+        const div = document.createElement("div");
+        div.textContent = `${dateKey} : ${title}`;
+        searchResults.appendChild(div);
+        found = true;
+      }
+    });
+  }
+
+  if (!found) {
+    searchResults.textContent = "見つかりませんでした";
+  }
+});
+
   /* ===== カレンダー描画 ===== */
   function renderCalendar(year, month) {
 
