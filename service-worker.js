@@ -3,8 +3,8 @@ const CACHE_NAME = "my-calendar-cache-v1";
 const urlsToCache = [
   "./",
   "./index.html",
-  "./style.css",
-  "./script.js",
+  "./sample.css",
+  "./sample.js",
   "./manifest.json"
 ];
 
