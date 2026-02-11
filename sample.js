@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener ("DOMContentLoaded", () => {
 
   /* ===== 基本参照 ===== */
   const today = new Date();
@@ -68,27 +68,23 @@ const saveBtn = document.getElementById("save-event");
     updateHeader(Number(y), Number(m) - 1);
   });
 
-/* ===== 中央検索モーダル ===== */
 const openSearch = document.getElementById("open-search");
-const searchModal = document.getElementById("search-modal");
-const centerSearch = document.getElementById("center-search");
+const searchInput = document.getElementById("search-input");
+const header = document.querySelector(".app-header");
 
 openSearch.addEventListener("click", () => {
-  searchModal.classList.add("active");
-  centerSearch.focus();
+  header.classList.add("searching");
+  searchInput.focus();
 });
 
-/* 背景タップで閉じる */
-searchModal.addEventListener("click", (e) => {
-  if (e.target === searchModal) {
-    searchModal.classList.remove("active");
-    centerSearch.value = "";
-  }
+/* フォーカス外れたら閉じる */
+searchInput.addEventListener("blur", () => {
+  header.classList.remove("searching");
+  searchInput.value = "";
 });
 
-/* 入力検知 */
-centerSearch.addEventListener("input", () => {
-  const keyword = centerSearch.value;
+searchInput.addEventListener("input", () => {
+  const keyword = searchInput.value;
   console.log("検索:", keyword);
 });
 
@@ -307,6 +303,8 @@ bottomSheet.addEventListener("touchend", () => {
   bottomSheet.style.transform = "";
   startY = 0;
   currentY = 0;
+});
+
 });
 
 });
