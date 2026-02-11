@@ -222,3 +222,39 @@ body {
 .bottom-sheet.active {
   transform: translateY(0);
 }
+
+/* ===== Search Modal ===== */
+.search-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+
+  z-index: 3000;
+}
+
+.search-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#center-search {
+  width: 80%;
+  max-width: 320px;
+  height: 44px;
+  padding: 0 14px;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 12px;
+  outline: none;
+
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+}
