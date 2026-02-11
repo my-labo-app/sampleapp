@@ -62,37 +62,6 @@ body {
   display: block;
 }
 
-.search-box {
-  display: flex;
-  gap: 8px;
-  width: 80%;
-  max-width: 340px;
-}
-
-#center-search {
-  flex: 1;
-  height: 44px;
-  padding: 0 12px;
-  border-radius: 12px;
-  border: none;
-}
-
-#do-search {
-  height: 44px;
-  padding: 0 14px;
-  border-radius: 12px;
-  border: none;
-  background: #4f46e5;
-  color: white;
-}
-
-#search-results {
-  margin-top: 20px;
-  width: 80%;
-  max-width: 340px;
-  color: white;
-}
-
 .icon-btn,
 .dropdown-btn {
   border: none;
