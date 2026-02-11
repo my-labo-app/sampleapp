@@ -68,23 +68,27 @@ const saveBtn = document.getElementById("save-event");
     updateHeader(Number(y), Number(m) - 1);
   });
 
+/* ===== 中央検索モーダル ===== */
 const openSearch = document.getElementById("open-search");
-const searchInput = document.getElementById("search-input");
-const header = document.querySelector(".app-header");
+const searchModal = document.getElementById("search-modal");
+const centerSearch = document.getElementById("center-search");
 
 openSearch.addEventListener("click", () => {
-  header.classList.add("searching");
-  searchInput.focus();
+  searchModal.classList.add("active");
+  centerSearch.focus();
 });
 
-/* フォーカス外れたら閉じる */
-searchInput.addEventListener("blur", () => {
-  header.classList.remove("searching");
-  searchInput.value = "";
+/* 背景タップで閉じる */
+searchModal.addEventListener("click", (e) => {
+  if (e.target === searchModal) {
+    searchModal.classList.remove("active");
+    centerSearch.value = "";
+  }
 });
 
-searchInput.addEventListener("input", () => {
-  const keyword = searchInput.value;
+/* 入力検知 */
+centerSearch.addEventListener("input", () => {
+  const keyword = centerSearch.value;
   console.log("検索:", keyword);
 });
 
