@@ -54,7 +54,7 @@ body {
 }
 
 /* 検索モード */
-.app-header.searching #header-center {
+.app-header.searching .header-center {
   display: none;
 }
 
