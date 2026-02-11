@@ -231,10 +231,16 @@ body {
   margin: 8px auto;
 }
 
+.sheet-content {
+  padding: 16px;
+}
+
 #selectedDate {
-  margin-left: 16px;
+  margin: 8px 0 16px 16px;
 }
 
 #no-event {
   text-align: center;
+  margin-top: 40px;
+  color: #888;
 }
