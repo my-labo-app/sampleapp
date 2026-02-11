@@ -86,6 +86,9 @@ body {
   color: #555;
 }
 
+.ad-space {
+  height: 55px;
+
 /* ===== Main ===== */
 .main-content {
   padding-top: 56px;
