@@ -3,42 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendar Mock</title>
-
-  <link rel="stylesheet" href="sample.css">
+  <title>my calendar</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
 
-<header class="header">
-  <div class="month">
-    <div class="month-num" id="monthNum"></div>
+  <!-- ===== Header ===== -->
+  <header class="app-header">
+    <button class="icon-btn" id="open-search">🔎</button>
+
+    <div class="header-center">
+      <span id="header-month"></span>
+      <button id="open-picker" class="dropdown-btn">▼</button>
+    </div>
+
+    <input type="search" id="search-input" placeholder="予定を検索">
+
+    <button class="icon-btn" id="go-today">🗓</button>
+  </header>
+  
+  <!-- ===== Calendar ===== -->
+  <main class="main-content">
+    <div class="calendar-scroll" id="calendar-scroll"></div>
+  </main>
+
+  <!-- ===== Hidden Month Picker ===== -->
+ <input type="month" id="month-picker" style="position: fixed;width: 1px;height: 1px;opacity: 0;">
+
+  <!-- ===== Floating Button ===== -->
+  <button id="add-btn">+</button>
+
+  <!-- ===== Bottom Menu ===== -->
+  <nav class="bottom-menu">
+    <button>🏠<br>home</button>
+    <button>🗓<br>calendar</button>
+    <button>💰<br>account</button>
+    <button>📕<br>diary</button>
+    <button>⚙️<br>setting</button>
+  </nav>
+
+  <!-- ===== Bottom Sheet ===== -->
+<div id="bottomSheet" class="bottom-sheet">
+  <div class="sheet-handle"></div>
+
+  <div class="sheet-content">
+    <h3 id="selectedDate"></h3>
+
+    <!-- ▼ 表示モード -->
+    <div id="view-mode">
+      <div id="event-list"></div>
+      <p id="no-event">予定がありません</p>
+    </div>
+
+    <!-- ▼ 追加モード -->
+    <div id="add-mode" style="display:none;">
+      <input type="text" id="event-title" placeholder="予定を入力">
+      <button id="save-event">保存</button>
+    </div>
   </div>
-
-  <button id="todayBtn" class="today-btn">↺TODAY</button>
-
-  <div class="header-icons">
-    <span>🔍</span>
-    <span>📆</span>
-    <span>⚙️</span>
-  </div>
-</header>
-
-<div class="weekdays">
-  <span>月</span><span>火</span><span>水</span>
-  <span>木</span><span>金</span><span>土</span><span>日</span>
 </div>
 
-<div class="calendar" id="calendar"></div>
-
-<section class="detail">
-  <div class="holiday">建国記念の日</div>
-  <h2 id="detailDate">2026年2月11日（水） 大安</h2>
-
-  <button class="add-btn">＋ 新しい予定</button>
-</section>
-
+  <script src="script.js"></script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
 </body>
-<script src="sample.js"></script>
 </html>
