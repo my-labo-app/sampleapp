@@ -1,4 +1,4 @@
-document.addEventListener ("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
   /* ===== 基本参照 ===== */
   const today = new Date();
