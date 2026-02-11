@@ -69,6 +69,52 @@
   </div>
 </div>
 
+<div id="addEventSheet" class="bottom-sheet">
+  <div class="sheet-handle"></div>
+
+  <div class="sheet-content">
+
+    <div class="sheet-header">
+      <button id="closeAdd">×</button>
+      <button id="saveEvent">保存</button>
+    </div>
+
+    <input type="text" id="eventTitle"
+      placeholder="内容を入力してください" class="title-input">
+
+    <div class="row">
+      <span>終日</span>
+      <input type="checkbox" id="allDayToggle">
+    </div>
+
+    <div class="row clickable" id="startRow">
+      <span>開始</span>
+      <span id="startDisplay"></span>
+    </div>
+
+    <div class="row clickable" id="endRow">
+      <span>終了</span>
+      <span id="endDisplay"></span>
+    </div>
+
+    <div class="color-row">
+      <div class="color-box"></div>
+      <span>Princess.</span>
+    </div>
+
+    <div class="row clickable" id="openNotification">
+      <span>通知</span>
+      <span id="notificationSummary">なし</span>
+    </div>
+
+    <div class="row clickable" id="openRepeat">
+      <span>繰り返し</span>
+      <span id="repeatSummary">なし</span>
+    </div>
+
+  </div>
+</div>
+
   <script src="sample.js"></script>
   <script>
   if ("serviceWorker" in navigator) {
