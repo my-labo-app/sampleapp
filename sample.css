@@ -223,10 +223,10 @@ body {
   transform: translateY(0);
 }
 
-#event-list {
+#view-mode #event-list {
   left: 5px;
 }
 
-#no-event: {
+#view-mode #no-event: {
   text-align: center;
 }
