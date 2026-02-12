@@ -274,6 +274,64 @@ saveBtn.addEventListener("click", () => {
   openView(selectedKey, selectedDate.textContent);
 });
 
+// ===== 状態 =====
+let eventState = {
+  title: "",
+  allDay: false,
+  start: new Date(),
+  end: new Date(Date.now() + 60 * 60 * 1000),
+  notifications: [],
+  repeat: "none"
+};
+
+// ===== フォーマット =====
+function formatDate(date) {
+  return date.toLocaleDateString("ja-JP", {
+    month: "numeric",
+    day: "numeric",
+    weekday: "short"
+  });
+}
+
+function formatDateTime(date) {
+  return date.toLocaleString("ja-JP", {
+    month: "numeric",
+    day: "numeric",
+    weekday: "short",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+// ===== 描画 =====
+function render() {
+  const startEl = document.getElementById("startDisplay");
+  const endEl = document.getElementById("endDisplay");
+
+  if (eventState.allDay) {
+    startEl.textContent = formatDate(eventState.start);
+    endEl.textContent = formatDate(eventState.end);
+  } else {
+    startEl.textContent = formatDateTime(eventState.start);
+    endEl.textContent = formatDateTime(eventState.end);
+  }
+}
+
+render();
+
+// ===== 終日トグル =====
+document.getElementById("allDayToggle")
+  .addEventListener("change", (e) => {
+    eventState.allDay = e.target.checked;
+    render();
+  });
+
+// ===== タイトル同期 =====
+document.getElementById("eventTitle")
+  .addEventListener("input", (e) => {
+    eventState.title = e.target.value;
+  });
+
 /* タッチ開始 */
 bottomSheet.addEventListener("touchstart", (e) => {
   startY = e.touches[0].clientY;
